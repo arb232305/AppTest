@@ -7,7 +7,8 @@ import android.os.Bundle;
 import android.text.Layout;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
+
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,18 +24,12 @@ public class MainActivity extends AppCompatActivity {
         final TextView text = findViewById(R.id.averys_text);
         final String[] collors = {"#0015ff", "#ff2600", "#00ff19", "#000000", "#d002ff"};
 
-        final LinearLayout layout = findViewById(R.id.layout);
-        addText(layout, "hey alden");
-        addText(layout, "?");
-        addText(layout, "U there?");
-        addText(layout, "ALDENNNNN?");
-        addText(layout, "I see how it is");
-        addText(layout, "fine then!");
+        final RelativeLayout layout = findViewById(R.id.layout);
 
 
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                text.setText("testing123");
+                text.setText("bum");
                 text.setTextColor(Color.parseColor(collors[coll]));
 
                 if (coll == collors.length - 1) {
@@ -49,13 +44,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void addText(LinearLayout layout, String text){
+    public void addText(RelativeLayout layout, String text){
         TextView newText = new TextView(this);
         newText.setText(text);
         newText.setId((int)(Math.random() * 1000));
-        newText.setWidth(200);
+        newText.setWidth(1000);
         newText.setHeight(200);
-        newText.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+        newText.setX((int)(Math.random() * 1000));
+        newText.setY((int)(Math.random() * 1000));
 
         layout.addView(newText);
     }
