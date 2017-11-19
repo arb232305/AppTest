@@ -24,17 +24,17 @@ public class MainActivity extends AppCompatActivity {
         final String[] collors = {"#0015ff", "#ff2600", "#00ff19", "#000000", "#d002ff"};
 
         final LinearLayout layout = findViewById(R.id.layout);
-        addText(layout, "test1");
-        addText(layout, "test2");
-        addText(layout, "test3");
-        addText(layout, "test4");
-        addText(layout, "test4");
-        addText(layout, "test4");
+        addText(layout, "hey alden");
+        addText(layout, "?");
+        addText(layout, "U there?");
+        addText(layout, "ALDENNNNN?");
+        addText(layout, "I see how it is");
+        addText(layout, "fine then!");
 
 
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                text.setText("did i work?");
+                text.setText("testing123");
                 text.setTextColor(Color.parseColor(collors[coll]));
 
                 if (coll == collors.length - 1) {
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                     coll++;
                 }
 
-                addText(layout, "BY GOD");
+                addText(layout, "BLAH!");
 
             }
         });
